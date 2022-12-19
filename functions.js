@@ -99,17 +99,19 @@
 /* Answer */
 
 function timeConversion(s) {
-    let sum = 0;
-    if (s <= 12) {
-        sum = (s + 12);
-        if (sum == 24) {
-            sum = 00;
+    if (s < 12) {
+        s = (s + 12);
+        if (s == 24) {
+            s = 00;
         }
-    } else {
+    } else if (s >= 12) {
+        return s;
+    }
+    else {
         return 'enter a valid hour between 1 and 12'
     }
-    return sum;
+    return s;
 }
 
-let convert = timeConversion(8);
+let convert = timeConversion(18);
 console.log(convert);

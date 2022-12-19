@@ -16,78 +16,100 @@
 /* Answer */
 
 // first fn
-function countBs(string) {
+// function countBs(string) {
 
-    let counter = 0;
+//     let counter = 0;
 
-    console.log('Number of "Bs": ');
+//     console.log('Number of "Bs": ');
 
-    for (i = 0; i < string.length; i++) {
+//     for (i = 0; i < string.length; i++) {
 
-        if (string[i] === "B") {
+//         if (string[i] === "B") {
 
-            counter++
+//             counter++
 
+//         }
+//     }
+//     console.log(counter);
+// }
+
+// // second fn
+// function countLetter(string, letter) {
+//     let counter = 0;
+
+//     console.log(`Number of "${letter}": `);
+
+//     for (i = 0; i < string.length; i++) {
+
+//         if (string[i] === letter) {
+
+//             counter++
+
+//         }
+//     }
+//     return counter;
+// }
+
+// function countChar(string, counter = 1) {
+
+//     console.log('The repeated characters are: ');
+
+//     for (k = 0; k < string.length; k++) {
+
+//         for (j = k + 1; j < string.length; j++) {
+
+//             if (string[k] == string[j]) {
+
+//                 counter++;
+
+//                 if (counter > 1 && string[k] != ' ')
+//                     console.log(string[k]);
+
+//             }
+//         }
+//     }
+
+// }
+
+// function countRepeated(string) {
+//     let repeated = [];
+//     for (k = 0; k < string.length; k++) {
+//         for (let l = k + 1; l < string.length; l++) {
+//             const element = string[l];
+//             if (element == string[k] && !repeated.includes(string[k]) && element != ' ') {
+//                 repeated.push(string[k]);
+//                 console.log(element);
+//                 break;
+//             }
+//         }
+//     }
+//     return repeated;
+// }
+
+// countBs("Beep Beep Beep");
+// let l = countLetter("Bees and roots are temrosized rendered", "r");
+// console.log(l);
+// let repeated = countRepeated("Bees and roots !e!")
+// console.log(repeated);  
+
+/* EX2 */
+
+// using a function, convert an hour to its 24h version alternative
+
+/* Answer */
+
+function timeConversion(s) {
+    let sum = 0;
+    if (s <= 12) {
+        sum = (s + 12);
+        if (sum == 24) {
+            sum = 00;
         }
+    } else {
+        return 'enter a valid hour between 1 and 12'
     }
-    console.log(counter);
+    return sum;
 }
 
-// second fn
-function countLetter(string, letter) {
-    let counter = 0;
-
-    console.log(`Number of "${letter}": `);
-
-    for (i = 0; i < string.length; i++) {
-
-        if (string[i] === letter) {
-
-            counter++
-
-        }
-    }
-    return counter;
-}
-
-function countChar(string, counter = 1) {
-
-    console.log('The repeated characters are: ');
-
-    for (k = 0; k < string.length; k++) {
-
-        for (j = k + 1; j < string.length; j++) {
-
-            if (string[k] == string[j]) {
-
-                counter++;
-
-                if (counter > 1 && string[k] != ' ')
-                    console.log(string[k]);
-
-            }
-        }
-    }
-
-}
-
-function countRepeated(string) {
-    let repeated = [];
-    for (k = 0; k < string.length; k++) {
-        for (let l = k + 1; l < string.length; l++) {
-            const element = string[l];
-            if (element == string[k] && !repeated.includes(string[k]) && element != ' ') {
-                repeated.push(string[k]);
-                console.log(element);
-                break;
-            }
-        }
-    }
-    return repeated;
-}
-
-countBs("Beep Beep Beep");
-let l = countLetter("Bees and roots are temrosized rendered", "r");
-console.log(l);
-let repeated = countRepeated("Bees and roots !e!")
-console.log(repeated);  
+let convert = timeConversion(8);
+console.log(convert);

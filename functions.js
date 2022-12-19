@@ -98,20 +98,20 @@
 
 /* Answer */
 
-function timeConversion(s) {
-    if (s <= 12) {
-        s = (s + 12);
-        if (s == 24) {
-            s = 00;
+function timeConversion(h) {
+    if (h <= 12) {
+        h = (h + 12);
+        if (h == 24) {
+            h = 00;
         }
-    } else if (s > 12) {
-        return s;
+    } else if (h > 12) {
+        return h;
     }
     else {
         return 'enter a valid hour between 1 and 12'
     }
-    return s;
+    return h;
 }
 
-let convert = timeConversion(12);
+let convert = timeConversion(6);
 console.log(convert);

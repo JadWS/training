@@ -99,12 +99,12 @@
 /* Answer */
 
 function timeConversion(s) {
-    if (s < 12) {
+    if (s <= 12) {
         s = (s + 12);
         if (s == 24) {
             s = 00;
         }
-    } else if (s >= 12) {
+    } else if (s > 12) {
         return s;
     }
     else {
@@ -113,5 +113,5 @@ function timeConversion(s) {
     return s;
 }
 
-let convert = timeConversion(18);
+let convert = timeConversion(12);
 console.log(convert);

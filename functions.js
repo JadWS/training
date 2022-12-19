@@ -86,8 +86,8 @@ function countRepeated(string) {
     return repeated;
 }
 
-// countBs("Beep Beep Beep");
-// let l = countLetter("Bees and roots are temrosized rendered", "r");
-// console.log(l);
+countBs("Beep Beep Beep");
+let l = countLetter("Bees and roots are temrosized rendered", "r");
+console.log(l);
 let repeated = countRepeated("Bees and roots !e!")
-console.log(repeated);
+console.log(repeated);  

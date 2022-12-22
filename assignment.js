@@ -158,42 +158,52 @@ function arrCheck(a, b) {
  */
 
 /*solution*/
-function checkLength(arr1, arr2) {
-    if (arr1.length != arr2.length)
-        return false
-    return true
-}
+
 
 // console.log(checkLength([1, 2, 3], [4, 5, 6, 8]));
 
 
-function checkValues(arr1, arr2) {
+function checkLengthAndValues(arr1, arr2) {
 
-    let tempArr = []
+    if (arr1.length != arr2.length)
+        return false
 
-    for (e of arr1) {
-        tempArr.push(e)
-    }
-    console.log("stack is: " + tempArr);
+    // let tempArr = []
 
-    for (element of tempArr) {
-        for (e of arr2) {
-            if (element == e) {
-                console.log("element: " + element, "e: " + e, "new tempArr: " + tempArr);
-                tempArr.pop(element)
-            }
+    // for (e of arr1) {
+    //     tempArr.push(e)
+    // }
+    // console.log("stack is: " + tempArr);
+
+    // for (element of tempArr) {
+    //     for (e of arr2) {
+    //         if (element == e) {
+    //             console.log("element: " + element, "e: " + e, "new tempArr: " + tempArr);
+    //             tempArr.pop(element)
+    //         }
+    //     }
+    // }
+    // console.log("new tempArr lenght: " + tempArr.length);
+
+    // if (tempArr.length == 0) {
+    //     return true
+    // }
+
+    // return false
+
+
+    for (i = 0; i < arr1.length; i++) {
+        if (arr1[i] != arr2[i]) {
+            break
         }
     }
-    console.log("new tempArr lenght: " + tempArr.length);
-
-    if (tempArr.length == 0) {
+    if (i == arr1.length)
         return true
-    }
 
     return false
 }
 
-console.log(checkValues([1, 2, 3], [1, 2, 3]));
+console.log(checkLengthAndValues([1, 2, 3], [1, 2, 3]));
 
 
 

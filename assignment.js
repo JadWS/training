@@ -1,12 +1,13 @@
 /*Q1*/
 // given a string s, check whether this string is a palyndrom
 
+/*solution*/
+
 /**
  * function with a parameter -> string for example 
  * assuming that s = 'dad'
  */
 
-/*solution*/
 function stringChecker(s) {
     for (i = 0; i < s.length; i++) {
         let lastElement = s.length - 1;
@@ -22,6 +23,8 @@ function stringChecker(s) {
 /*Q2*/
 // given a number x, check if the number is a palyndrom
 
+/*solution*/
+
 /**
  * let x = 121
  * first step: check last and first digit
@@ -30,7 +33,6 @@ function stringChecker(s) {
  * second step:
  */
 
-/*solution*/
 function nbChecker(nb) {
     let tempNb = nb;
     let newNb = nb % 10;
@@ -81,6 +83,7 @@ function even(n) {
 // given an array of integers, check whether all the values inside that array are prime
 
 /*solution*/
+
 /**
  * prime number: can be divided by 1 and itself only
  * array = [2, 3, 5, 7]
@@ -93,11 +96,7 @@ function isPrime(array) {
     // let array = [2, 3, 5, 7]
     for (e of array) {
         if (e > 1) {
-            for (i = 1; i < array.length; i++) {
-                if (e % 1 == 1) {
-                    console.log(e);
-                }
-            }
+
         }
     }
 }
@@ -109,16 +108,50 @@ function isPrime(array) {
 
 /*solution*/
 let x = 123
-let temp = x
-while (temp > 10) {
-    temp = Math.floor(temp / 10);
-    console.log(temp);
+let reversed = 0
+while (x > 0) {
+    reversed = (reversed * 10) + (x % 10);
+    x = Math.floor(x / 10);
 }
+// console.log(reversed)
 
 
-
-
+/*Q6*/
 // given 2 arrays a and b, check whether b contains all the values of a
+
+/*solution*/
+
+/**
+ * a = [1, 2, 3]
+ * b = [1, 2, 3]
+ * expected output -> true
+ * 
+ */
+
+let a = [1, 2]
+let b = [1, 2, 6, 4]
+
+function arrCheck(a, b) {
+
+    for (e1 of a) {
+        for (e2 of b) {
+            if (e1 != e2) {
+                return false
+            }
+            if (e1 == e2) {
+                return true
+            }
+        }
+    }
+}
+// console.log(arrCheck(a, b));
+
+
+
+
+
+
+
 // given 2 arrays a and b, check whether these arrays are similar (size, values, etc)
 // given 2 objects, check for any differences between the objects
 // write the Fibonacci Sequence until a value n

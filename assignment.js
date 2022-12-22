@@ -146,14 +146,92 @@ function arrCheck(a, b) {
 }
 // console.log(arrCheck(a, b));
 
-
-
-
-
-
-
+/*Q7*/
 // given 2 arrays a and b, check whether these arrays are similar (size, values, etc)
+
+/**
+ * arr1 = [1, 2, 3]
+ * arr2 = [1, 2, 3]
+ * compare size => length
+ * compare each element in the array
+ * compare the order of each element
+ */
+
+/*solution*/
+function checkLength(arr1, arr2) {
+    if (arr1.length != arr2.length)
+        return false
+    return true
+}
+
+// console.log(checkLength([1, 2, 3], [4, 5, 6, 8]));
+
+
+function checkValues(arr1, arr2) {
+
+    let tempArr = []
+
+    for (e of arr1) {
+        tempArr.push(e)
+    }
+    console.log("stack is: " + tempArr);
+
+    for (element of tempArr) {
+        for (e of arr2) {
+            if (element == e) {
+                console.log("element: " + element, "e: " + e, "new tempArr: " + tempArr);
+                tempArr.pop(element)
+            }
+        }
+    }
+    console.log("new tempArr lenght: " + tempArr.length);
+
+    if (tempArr.length == 0) {
+        return true
+    }
+
+    return false
+}
+
+console.log(checkValues([1, 2, 3], [1, 2, 3]));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Q8*/
 // given 2 objects, check for any differences between the objects
+
+/*solution*/
+
+
+/*Q9*/
 // write the Fibonacci Sequence until a value n
+
+/*solution*/
+
+
+
+/*Q6*/
 // given 2 numbers x and y representing the starting positions of 2 frogs, and v1 and v2 representing the jumping distance for each frog, check whether these frogs meet inside a pond of size n
+
+/*solution*/
+
+/*Q6*/
 // given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. Then print the respective minimum and maximum values as a single line of two space-separated long integers.
+
+/*solution*/

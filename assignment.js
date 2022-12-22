@@ -203,7 +203,7 @@ function checkLengthAndValues(arr1, arr2) {
     return false
 }
 
-console.log(checkLengthAndValues([1, 2, 3], [1, 2, 3]));
+console.log(checkLengthAndValues([1, 2, 3], [1, 2, 5]));
 
 
 
